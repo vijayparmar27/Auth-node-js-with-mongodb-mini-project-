@@ -1,0 +1,27 @@
+
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(81, 64, 180);
+    border: 2px red;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+    padding: 5px 8px;
+    margin: auto;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.register{
+    padding: 50px,10px;
+    margin: 90px 170px;;
+}

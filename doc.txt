@@ -1,0 +1,20 @@
+1) create database=> Student_information
+
+2) create two table =>a) users  b) data
+
+3) go in link register and create account
+
+4)login 
+
+5) port = 8000
+
+
+ <label for="myimage">image:</label>
+      <img src="http://localhost:8000/images/upload_images/<%=user.image%>" alt="Girl in a jacket" width="50" height="60">
+      <input
+      type="file"
+      class="form-control"
+      id="exampleInputPassword1"
+      name="myimage"
+      accept="image/*"
+    />

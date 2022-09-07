@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2><%= title %></h2>
+      <form
+        action="/update/<%= user.id %>"
+        method="post"
+        encType="multipart/form-data"
+      >
+        <input type="hidden" value="<%= user.id %>" name="id" />
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter Name"
+            value="<%= user.name %>"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">class:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter Name"
+            value="<%= user.class %>"
+            name="class1"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="myimage" class="form-label">Imade Upload</label>
+          <img src="/images/upload_images/<%=user.image%>" alt="Girl in a jacket" width="50" height="60">
+          <input
+            type="file"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="myimage"
+            accept="image/*"
+            value="/images/upload_images/<%=user.image%>"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            value="<%= user.email %>"
+            name="email"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
